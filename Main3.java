@@ -1,0 +1,34 @@
+import java.io.PrintStream;
+import java.util.Scanner;
+public class Main {
+    public static Scanner in = new Scanner(System.in);
+    public static PrintStream out = System.out;
+    static boolean isSimple(int x) {
+        int k = 0;
+        for (int i = 2; i < x; i++) {
+            if (x%i == 0) {
+                k++;
+            }
+        }
+        if (k == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        int N = in.nextInt();
+        int x = N+1, y = x+2, k = 0;
+        while (k == 0) {
+            if (isSimple(x) && isSimple(y)) {
+                out.print(x);
+                out.print(" ");
+                out.print(y);
+                k++;
+            }
+            x++;
+            y++;
+        }
+    }
+}
