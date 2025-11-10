@@ -19,16 +19,15 @@ public class Main {
     }
     public static void main(String[] args) {
         int N = in.nextInt();
-        int x = N+1, y = x+2, k = 0;
+        int x = N+1, k = 0;
         while (k == 0) {
-            if (isSimple(x) && isSimple(y)) {
+            if (isSimple(x) && isSimple(x+2)) {
                 out.print(x);
                 out.print(" ");
-                out.print(y);
+                out.print(x+2);
                 k++;
             }
             x++;
-            y++;
         }
     }
 }
