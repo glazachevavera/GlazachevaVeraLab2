@@ -10,24 +10,16 @@ public class Main {
                 k++;
             }
         }
-        if (k == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return k == 0;
     }
     public static void main(String[] args) {
         int N = in.nextInt();
-        int x = N+1, k = 0;
-        while (k == 0) {
-            if (isSimple(x) && isSimple(x+2)) {
-                out.print(x);
-                out.print(" ");
-                out.print(x+2);
-                k++;
-            }
+        int x = N+1;
+        while (!isSimple(x) || !isSimple(x+2)) {
             x++;
         }
+        out.print(x);
+        out.print(" ");
+        out.print(x+2);
     }
 }
