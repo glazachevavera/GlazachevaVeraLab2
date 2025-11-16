@@ -8,11 +8,11 @@ public class Main {
         double [] a = new double[n];
         for (int i = 0; i < n; i++)
             a[i] = in.nextDouble();
-        double k = a[1] - a[0];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (a[i] - a[j] < k) {
-                    k = a[i] - a[j];
+        double k = Math.abs(a[1] - a[0]);
+        for (int i = 0; i < n-1; i++) {
+            for (int j = i+1; j < n; j++) {
+                if (Math.abs(a[i] - a[j]) < k) {
+                    k = Math.abs(a[i] - a[j]);
                 }
             }
         }
