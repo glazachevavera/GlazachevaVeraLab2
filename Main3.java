@@ -5,7 +5,7 @@ public class Main {
     public static PrintStream out = System.out;
     static boolean isSimple(int x) {
         int k = 0;
-        for (int i = 2; i < Math.pow(x,0.5); i++) {
+        for (int i = 2; i < Math.pow(x,0.5)+1; i++) {
             if (x%i == 0) {
                 k++;
             }
